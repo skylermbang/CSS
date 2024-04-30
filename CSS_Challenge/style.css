@@ -1,9 +1,10 @@
-body{
+.father{
   display: flex;
-  height: 100vh;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center ;
-  gap: 10px
+  gap: 10px;
+  /* flex-wrap: wrap; */
+  flex-flow : row wrap;
 }
 
 .box{
