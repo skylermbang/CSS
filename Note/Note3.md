@@ -26,4 +26,18 @@ grid-template-areas: :
     grid-template-areas: "header header header header"
                         "menu content content content" 
                         "footer footer footer footer";
+    
+
+
+    make it easiser : 
+    grid-template: "header header header header"  1fr 
+                 "menu content content content" 2fr 
+                 "footer footer footer footer" 0.5fr /1fr 1fr 1fr 1fr    
+
+
+
+span :
+
+you can easily specify the how many row/columns for this 
+grid-row : span 2  = grid-row: 1 / -1;   t
 
