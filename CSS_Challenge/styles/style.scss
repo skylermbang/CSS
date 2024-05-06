@@ -1,0 +1,65 @@
+$bgColor:rgb(216, 165, 165);
+$alertColor:black;
+
+
+body{
+
+  background-color: $bgColor;
+  padding: 0;
+  margin: 0;
+ 
+}
+
+ul{
+  list-style-type: none;
+  padding:0;
+
+  display:flex;
+  gap :10px;
+
+  li{
+    background-color: tomato;
+   padding: 5px 10px;
+   color:white;
+   border-radius: 7px;
+
+  &:hover{
+    opacity: 0.1;
+  
+    a{
+      color:rgb(40, 7, 230)
+    }
+  }
+    a{
+      text-decoration: none;
+      color:rgb(211, 23, 23) 
+   }
+  
+  }
+}
+
+@mixin alert($alertColor){
+  margin:10px;
+  padding:10px 20px;
+  border-radius: 10px;
+  border:1px dashed black;
+  background-color: $alertColor;
+
+}
+
+.sucess {
+  @include alert(green)
+}
+
+.failed {
+  @include alert(rgb(154, 203, 8))
+}
+
+.warning {
+  @include alert(rgb(251, 39, 7))
+}
+
+
+
+
+

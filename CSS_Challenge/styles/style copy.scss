@@ -33,17 +33,19 @@
 
 */
 
+
+/*  lecture 3.3 3.4 3.5
 body {
   padding: 0; 
   margin: 0;
-  height: 100vh; /* 100% of view ports */
+  height: 100vh; /* 100% of view ports 
 
   display: grid;
   /*grid-template-columns: 1fr 1fr 1fr 1fr ; 
   grid-template-rows: 1fr 2fr 1fr;
   grid-template-areas: "header header header header"
                        "menu content content content" 
-                       "footer footer footer footer"; */
+                       "footer footer footer footer"; 
   grid-template: "header header header header"  1fr 
                  "menu content content content" 2fr 
                  "footer footer footer footer" 0.5fr /1fr 1fr 1fr 1fr           
@@ -67,4 +69,44 @@ aside{
 footer{
   grid-area:footer
   background-color: brown;
+};
+*/
+
+
+/* lecture 3.8 3.9 
+.father{
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(3, 40px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 10px; 
+  grid-auto-flow: column;
+
+  place-content: center;
+}
+
+.child{
+  font-size: 28px;
+  background-color: rgb(109, 228, 188);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+
+*/
+
+.father{
+  display: grid;
+  gap:10px;
+  height: 100vh;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+}
+
+.child{
+  background-color: red;
+  display: flex;
+  font-size: 32px;
+  justify-content: center;
+  align-items: center;
 }
