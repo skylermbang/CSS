@@ -1,0 +1,82 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+
+.father{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, minmax(150px, 1fr));
+}
+
+
+.box:nth-child(1){
+  background-color:black;
+  color:white;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  padding-left: 10px;
+  padding-top:5px;
+}
+
+.box:nth-child(2){
+  background-color:#a22cba;
+  color:white;
+}
+.box:nth-child(3){
+  background-color: #f5efef;
+  grid-row: 1 / span 3;
+  grid-column: 3 / span 1; /* Occupy the entire third column */
+  height: 3fr;
+}
+
+.box:nth-child(3) ul{
+  padding-top: 5px;
+  font-size: smaller;
+}
+
+.box:nth-child(3) li{
+  font-size: larger;
+}
+
+.box:nth-child(3) li:nth-child(8) span {
+
+  background-color: #a22cba; 
+  
+}
+
+
+.box:nth-child(4){
+  background-color: #d9e7df;
+  grid-row: 1 / span 3;
+  grid-column: 4 / span 1; /* Occupy the entire fourth column */
+  height: 3fr;
+}
+.box:nth-child(4) ul{
+  padding-top: 5px;
+  font-size: smaller;
+  display:flex;
+  flex-direction: column-reverse;
+}
+
+.box:nth-child(4) li{
+  font-size: larger;
+}
+
+.box:nth-child(5){
+  background-color: #ff0000;
+  grid-row: 2 / span 2; /* Span two rows */
+  grid-column: 1
+
+}
+.box:nth-child(6){
+  background-color: #fff700;
+  grid-row: 3 / span 1
+
+
+}

@@ -35,9 +35,56 @@ grid-template-areas: :
                  "footer footer footer footer" 0.5fr /1fr 1fr 1fr 1fr    
 
 
+3.5
+    span :
+        you can easily specify the how many row/columns for this 
+        grid-row : span 2  = grid-row: 1 / -1;   t
 
-span :
 
-you can easily specify the how many row/columns for this 
-grid-row : span 2  = grid-row: 1 / -1;   t
+3.6 Auto Columns and Rows
+    For dynamic contents
+    these two properties will add the 
+    "unexpected" contents size and in row (default)
+    grid-auto-rows: 1fr;   /* incase of any extra  rows added*/
+    grid-auto-flow: row 
 
+
+3.7 Align and Justify Items 
+
+    Justify-items : stretch the contents in width
+    stretch only works when the child dosent have any width
+
+    Align-items : strech only work when we dont have height
+
+3.8 Align and Justify 
+
+    place the whole grid thing 
+    this will only works when the grid container have extra space (usually when the grid cell is set with px not fr measurment)
+
+    short-cut :  place-content : center start;
+
+
+3.9 Auto Sizing and Minmax
+
+    grid-template-columns: 1fr max-content 1fr;
+
+    max-content : as big as the content can be
+    min-content : as small as longerst words 
+
+    grid-template-columns: 1fr minmax(min-content,1fr) 1fr;
+  
+
+3.10 Auto Fill and Auto Fit
+
+    responsive grid 
+
+    3grids (web) -> 2 grids(ipad) -> 1grid (mobile)
+
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+       
+       auto-fill and auto-fit  
+       auto-fill:   as many column you create even if it 1fr 
+                        create empty column in the extra space
+
+       auto-fit:  empty column will be ignored
+                        grid continers collapse the empty space
